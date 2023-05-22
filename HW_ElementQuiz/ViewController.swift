@@ -139,7 +139,6 @@ class ViewController: UIViewController {
     }
 
 
-
     // 題目設置相關（問題、選項）、 nextButton隱藏、題目提示
     func setupQuestion() {
 
@@ -162,19 +161,20 @@ class ViewController: UIViewController {
     }
 
 
-
     // 取得評分標準
     func getScoreResultText() {
 
         let result: String                                      // 根據分數設置不同的結果
-        if score < 30 {
+        if score < 20 {
+            result = "大俠還是自盡吧！"
+        } else if score < 40 {
             result = "資質駑鈍！再回去翻小說吧！"
-        } else if score < 50 {
+        } else if score < 60 {
             result = "資質平庸！梁發是你！？"
         } else if score < 80 {
-            result = "少林寺歡迎你！"
+            result = "少林廚藝訓練學院歡迎您！"
         } else {
-            result = "你有吃記憶吐司嗎！？"
+            result = "你有吃記憶吐司嗎？"
         }
         scoreResultLabel.text = "最終成績為：\(score) 分" + "\n" + result           // 是最後一題，顯示 評分結果
         scoreResultLabel.isHidden = false                                        // 是最後一題，顯示 評分欄
@@ -264,6 +264,47 @@ class ViewController: UIViewController {
         questions.append(question29)
         let question30 = MultipleChoiceQuestion(questionText: "勞德諾與岳靈珊於福州喬裝賣酒時，自稱何姓？", options: ["薛", "董", "薩"], correctAnswerText: "薩")
         questions.append(question30)
+        let question31 = MultipleChoiceQuestion(questionText: "天山童姥每隔多少年，便會返老還童一次？", options: ["三十年", "四十年", "二十年"], correctAnswerText: "三十年")
+        questions.append(question31)
+        let question32 = MultipleChoiceQuestion(questionText: "《雪山飛狐》的故事發生於哪一日？", options: ["正月十五日", "二月十五日", "三月十五日"], correctAnswerText: "三月十五日")
+        questions.append(question32)
+        let question33 = MultipleChoiceQuestion(questionText: "駱元通與駱冰的關係為：", options: ["父女", "兄妹", "沒有關係"], correctAnswerText: "父女")
+        questions.append(question33)
+        let question34 = MultipleChoiceQuestion(questionText: "刀白鳳的道號為：", options: ["芙蓉仙子", "玉虛散人", "清淨散人"], correctAnswerText: "玉虛散人")
+        questions.append(question34)
+        let question35 = MultipleChoiceQuestion(questionText: "下列人物中，何者不是古墓派的第四代弟子？", options: ["洪凌波", "陸無雙", "程英"], correctAnswerText: "程英")
+        questions.append(question35)
+        let question36 = MultipleChoiceQuestion(questionText: "楊過分別為全真教及古墓派的第幾代弟子？", options: ["第四代、第三代", "均是第三代", "均是第四代"], correctAnswerText: "均是第四代")
+        questions.append(question36)
+        let question37 = MultipleChoiceQuestion(questionText: "《鹿鼎記》中建寧公主之女雙雙，原來差點兒被取名為：", options: ["韋板凳", "韋銅鎚", "韋茶几"], correctAnswerText: "韋板凳")
+        questions.append(question37)
+        let question38 = MultipleChoiceQuestion(questionText: "韋小寶以何人掉換了刑場上的茅十八？", options: ["馮錫範", "吳應雄", "胡逸之"], correctAnswerText: "馮錫範")
+        questions.append(question38)
+        let question39 = MultipleChoiceQuestion(questionText: "向問天攜至梅莊的劉仲甫與驪山仙姥對奕的〈嘔血譜〉，總共有多少著？", options: ["一百一十一著", "一百一十二著", "一百一十三著"], correctAnswerText: "一百一十二著")
+        questions.append(question39)
+        let question40 = MultipleChoiceQuestion(questionText: "逍遙派諸多武功中，何項為李秋水獨有？", options: ["天山折梅手", "北冥神功", "小無相功"], correctAnswerText: "小無相功")
+        questions.append(question40)
+        let question41 = MultipleChoiceQuestion(questionText: "何門派不在圍勦明教總壇光明頂的六大派之列？", options: ["青城派", "崑崙派", "華山派"], correctAnswerText: "青城派")
+        questions.append(question41)
+        let question42 = MultipleChoiceQuestion(questionText: "「黯然銷魂掌」中沒有何招？", options: ["行屍走肉", "失魂落魄", "倒行逆施"], correctAnswerText: "失魂落魄")
+        questions.append(question42)
+        let question43 = MultipleChoiceQuestion(questionText: "活死人墓位於何處？", options: ["光明頂", "武當山", "終南山"], correctAnswerText: "終南山")
+        questions.append(question43)
+        let question44 = MultipleChoiceQuestion(questionText: "游坦之、蕭峰 、鳩摩智、令狐沖、方生大師等五人中，幾人練過「易筋經」？", options: ["五", "四", "三"], correctAnswerText: "三")
+        questions.append(question44)
+        let question45 = MultipleChoiceQuestion(questionText: "「七傷拳」為哪個門派的鎮山絕技？", options: ["崑崙派", "崆峒派", "武當派"], correctAnswerText: "崆峒派")
+        questions.append(question45)
+        let question46 = MultipleChoiceQuestion(questionText: "祖千秋偷了老頭子的何種藥丸，和在酒中，騙令狐沖服下？", options: ["續命八丸", "九轉熊蛇丸", "續命八丸"], correctAnswerText: "續命八丸")
+        questions.append(question46)
+        let question47 = MultipleChoiceQuestion(questionText: "韋小寶奉旨攻打神龍島時，曾在哪個島上觀戰？", options: ["通吃島", "台灣島", "海南島"], correctAnswerText: "通吃島")
+        questions.append(question47)
+        let question48 = MultipleChoiceQuestion(questionText: "第一次華山論劍與第二次華山論劍相距幾年？", options: ["十六年", "二十五年", "三十年"], correctAnswerText: "二十五年")
+        questions.append(question48)
+        let question49 = MultipleChoiceQuestion(questionText: "「萬里獨行」田伯光出家為僧後，法號為：", options: ["不如不戒", "不得不戒", "不可不戒"], correctAnswerText: "不可不戒")
+        questions.append(question49)
+        let question50 = MultipleChoiceQuestion(questionText: "《笑傲江湖》中，魔教長老以何種兵刃盡破華山派劍法？", options: ["長劍", "鐵槍", "棍棒"], correctAnswerText: "棍棒")
+        questions.append(question50)
+
     }
 }
 
